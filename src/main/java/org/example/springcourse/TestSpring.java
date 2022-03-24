@@ -1,6 +1,7 @@
 package org.example.springcourse;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 public class TestSpring {
     public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        Music music=context.getBean("rock",Music.class);
+/*        Music music=context.getBean("rock",Music.class);
 
         MusicPlayer musicPlayer=new MusicPlayer(music);
 
@@ -16,7 +17,13 @@ public class TestSpring {
 
         Music music1=context.getBean("classical",Music.class);
         MusicPlayer classicalPlayer =new MusicPlayer(music1);
-        classicalPlayer.playMusic();
+        classicalPlayer.playMusic();*/
+
+/*        MusicPlayer musicPlayer =context.getBean("musicPlayer",MusicPlayer.class);
+        musicPlayer.playMusic();*/
+
+        Computer computer=context.getBean("computer",Computer.class);
+        System.out.println(computer);
         context.close();
     }
 }
