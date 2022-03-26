@@ -1,13 +1,9 @@
 package org.example.springcourse;
 
-import org.springframework.stereotype.Component;
-
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-/*@Scope("prototype")*/
-/*@Scope("singleton")*/
-@Component
+
 public class ClassicalMusic implements Music{
     @PostConstruct
     public void doMyInit() {
